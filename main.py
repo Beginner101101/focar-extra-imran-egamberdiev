@@ -1,6 +1,10 @@
 from machine import Pin, PWM
 from time import sleep
 
+
+led = Pin("LED", Pin.OUT)
+
+
 # Motor A / Moottori A
 e1 = PWM(Pin(28))
 m1 = Pin(27, Pin.OUT)
@@ -31,17 +35,34 @@ e1.duty_u16(0)
 e2.duty_u16(0)
 
 # Wait 1 second for motors to stop / Odota yksi sekunti moottoreiden pysähtymistä
-sleep(3)
+sleep(1)
+
+
+#LED activation
+led.on()
+sleep(1)
+led.off()
+sleep(1)
+led.on()
+sleep(1)
+led.off()
+sleep(1)
+led.on()
+sleep(1)
+led.off()
+sleep(1)
 
 
 #Right    
+sleep(2)
+
 m1.value(1)
 m2.value(1)
             
-e1.duty_u16(0)
+e1.duty_u16(16383)
 e2.duty_u16(65534)
             
-sleep(1.5)
+sleep(1.8)
 e1.duty_u16(0)
 e2.duty_u16(0)
 
@@ -60,17 +81,34 @@ sleep(3)
 e1.duty_u16(0)
 e2.duty_u16(0)
 
+sleep(1)
+
+
+#LED activation
+led.on()
+sleep(1)
+led.off()
+sleep(1)
+led.on()
+sleep(1)
+led.off()
+sleep(1)
+led.on()
+sleep(1)
+led.off()
+sleep(1)
+
 
 #Right
-sleep(3)
+sleep(2)
             
 m1.value(1)
 m2.value(1)
             
-e1.duty_u16(0)
+e1.duty_u16(16383)
 e2.duty_u16(65534)
             
-sleep(1.5)
+sleep(1.8)
 e1.duty_u16(0)
 e2.duty_u16(0)
 
@@ -89,17 +127,34 @@ sleep(2)
 e1.duty_u16(0)
 e2.duty_u16(0)
 
+sleep(1)
+
+
+#LED activation
+led.on()
+sleep(1)
+led.off()
+sleep(1)
+led.on()
+sleep(1)
+led.off()
+sleep(1)
+led.on()
+sleep(1)
+led.off()
+sleep(1)
+
 
 #Right
-sleep(3)
+sleep(2)
             
 m1.value(1)
 m2.value(1)
             
-e1.duty_u16(0)
+e1.duty_u16(16383)
 e2.duty_u16(65534)
             
-sleep(1.5)
+sleep(1.8)
 e1.duty_u16(0)
 e2.duty_u16(0)
 
